@@ -5,7 +5,7 @@
 
 3) data cleaning and feature engineering using pandas, numpy, matplotlib.
 
-4) Model building using XgBoost,Linear regression, random  forest etc.
+4) Model building using XgBoost, Linear regression, random  forest etc.
 
 5) Model Hyperparamter tunning using gridsearchcv.
 
