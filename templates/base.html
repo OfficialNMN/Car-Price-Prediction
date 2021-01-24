@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external style sheet: url_for('main.css_FolderName','main.css') -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    {% block head %} {% endblock %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class='top-header'><h1>Car Price Prediction</h1></div>
+    {% block body %} {% endblock %}
+</body>
+</html>

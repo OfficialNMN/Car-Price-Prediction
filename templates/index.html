@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+{% block head %} <title>Car Price Prediction</title> {% endblock %}
+
+
+{% block body %}
+    <div class="submit-form">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Enter car details</h2>
+            <label for="Age">Car's age</label><br>
+            <input type="text" name="Age" class="text-field" required><br>
+            <label for="Present_Price">What is the Showroom Price?(In lakhs)</label><br>
+            <input type="text" name="Present_Price" class="text-field" required><br>
+            <label for="Kms_Driven">How many kilometers driven?</label><br>
+            <input type="text" name="Kms_Driven" class="text-field" required><br>
+            <label for="Owner">How much owners previously had the car(0 or 1 or 3) ?</label><br>
+            <input type="text" name="Owner" class="text-field" required><br>
+            <label for="Fuel_Type">What is the fuel type?</label><br>
+            <select name="Fuel_Type" class="dropdown" required>
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Diesel">CNG</option>
+            </select><br>
+            <label for="Seller_Type">Are you a Dealer or Individual</label><br>
+            <select name="Seller_Type" class="dropdown" required>
+                <option value="Dealer">Dealer</option>
+                <option value="Individual">Individual</option>
+            </select><br>
+            <label for="Transmission">Transmission type</label><br>
+            <select name="Transmission" id="research" class="dropdown" required>
+                <option value="Mannual">Manual Car</option>
+                <option value="Automatic">Automatic Car</option>
+            </select><br>
+            <button type="submit" class="button-class">Estimated Price</button>
+        </form>
+    </div>
+{% endblock %}
